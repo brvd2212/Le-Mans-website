@@ -1,0 +1,348 @@
+css
+/* Base styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #0b0d10;
+    color: #f3f3f3;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Navigation */
+header {
+    background-color: #101318;
+    border-bottom: 1px solid #292d34;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #ffe600;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li a {
+    color: #c2c5cb;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+nav li a:hover {
+    color: #ffe600;
+}
+
+/* Hero section */
+.hero {
+    min-height: 75vh;
+    padding: 110px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+background:
+    linear-gradient(
+        90deg,
+        rgba(11, 13, 16, 0.92) 0%,
+        rgba(11, 13, 16, 0.68) 55%,
+        rgba(11, 13, 16, 0.25) 100%
+    ),
+    url("https://www.topgear.com/sites/default/files/2022/06/4%20Le%20Mans%20Toyota%202022.jpg")
+    center / cover no-repeat;
+
+}
+
+.eyebrow {
+    color: #ffe600;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    max-width: 900px;
+    margin: 15px 0;
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    line-height: 0.98;
+    letter-spacing: -3px;
+}
+
+.intro {
+    max-width: 540px;
+    color: #b6bbc4;
+    font-size: 1.1rem;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 13px 22px;
+    background-color: #0319cc;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: background-color 0.2s ease;
+}
+
+.cta:hover {
+    background-color: #0319cc;
+}
+
+/* Content sections */
+.content-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 90px 8%;
+    border-bottom: 1px solid #292d34;
+    scroll-margin-top: 20px;
+}
+
+.content-section h2 {
+    margin-top: 10px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+}
+
+.content-section > p:not(.eyebrow) {
+    max-width: 750px;
+    color: #b6bbc4;
+}
+
+/* Interactive button */
+button {
+    margin-top: 18px;
+    padding: 13px 20px;
+    border: 1px solid #ffe600;
+    background: transparent;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0310cc;
+}
+
+#carFact {
+    color: #f3f3f3;
+}
+
+/* Footer */
+footer {
+    padding: 30px 8%;
+    background-color: #101318;
+    color: #8f96a1;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* Mobile layout */
+@media (max-width: 650px) {
+    nav {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav ul {
+        gap: 12px 20px;
+    }
+
+    .hero {
+        min-height: 65vh;
+        padding: 80px 6%;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .content-section {
+        padding: 65px 6%;
+    }
+}
+
+css
+/* Circuit section layout */
+.circuit-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.circuit-text h2 {
+    margin-top: 0;
+}
+
+.circuit-image {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 4px;
+    border: 1px solid #343943;
+}
+
+/* Stack the circuit image on smaller screens */
+@media (max-width: 650px) {
+    .circuit-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .circuit-image {
+        height: auto;
+        max-height: 340px;
+    }
+}
+
+/* Toyota Hypercar image */
+.car-image {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 4px;
+}
+
+/* Toyota TS050 history text */
+.car-description {
+    max-width: 750px;
+    margin: 25px auto;
+    color: #b8bdc7;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+
+/* Le Mans history timeline */
+.history-timeline {
+    max-width: 800px;
+    margin: 40px auto;
+    border-left: 2px solid #f5d500;
+    padding-left: 30px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: #f5d500;
+    border-radius: 50%;
+}
+
+.timeline-year {
+    color: #f5d500;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.timeline-content h3 {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.timeline-content p {
+    color: #b8bdc7;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Le Mans statistics panel */
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 35px 20px;
+    margin: 30px 0;
+    background: #111318;
+    border-top: 2px solid #f5d500;
+    border-bottom: 1px solid #343943;
+    text-align: center;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stat-number {
+    color: #f5d500;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.stat-label {
+    color: #b8bdc7;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+@media (max-width: 600px) {
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Smooth navigation between sections */
+html {
+    scroll-behavior: smooth;
+}
+
+.content-section,
+.stats-section {
+    scroll-margin-top: 30px;
+}

@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Mans | The Ultimate Endurance Race</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#home" class="logo">LE MANS<span>.</span></a>
+
+            <ul>
+                <li><a href="#circuit">The Circuit</a></li>
+                <li><a href="#cars">The Machines</a></li>
+                <li><a href="#history">The Legacy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <p class="eyebrow">CIRCUIT DE LA SARTHE · FRANCE</p>
+
+            <h1>24 HOURS.<br>ONE LEGEND.</h1>
+
+            <p class="intro">
+                Speed, endurance and engineering.
+                Discover the race that pushes both
+                machines and drivers to their limits.
+            </p>
+
+            <a href="#circuit" class="cta">EXPLORE THE RACE ↓</a>
+        </section>
+
+        <section id="circuit" class="content-section">
+          <p class="eyebrow">01 / THE CIRCUIT</p>
+
+    <div class="circuit-layout">
+        <div class="circuit-text">
+            <h2>A LAP LIKE NO OTHER.</h2>
+
+            <p>
+                The Circuit de la Sarthe combines permanent
+                racing facilities with public roads. Its long
+                straights, technical corners and Porsche Curves
+                make it one of endurance racing's great challenges.
+            </p>
+
+            <p>
+                For 24 hours, drivers battle changing light,
+                traffic and fatigue. Every lap demands precision,
+                commitment and trust in the machinery beneath them.
+            </p>
+        </div>
+
+        <img
+            class="circuit-image"
+            src="M23_3243_fine.jpg"
+            alt="Prototype endurance racing cars on the Circuit de la Sarthe at Le Mans"
+        >
+    </div>
+</section>   
+</section>
+
+        <section id="cars" class="content-section">
+            <p class="eyebrow">02 / THE MACHINES</p>
+            <h2>BUILT TO ENDURE.</h2>
+
+            <p>
+                Modern Hypercars combine aerodynamic efficiency,
+                advanced engineering and relentless performance.
+                Every lap demands speed, precision and reliability.
+            </p>
+            <img
+    class="car-image"
+    src="toyota ts050.jpeg"
+    alt="Toyota TS050 Hybrid Hypercar racing at Le Mans"
+>
+<div class="car-specs">
+    <div class="spec">
+        <span class="spec-label">MANUFACTURER</span>
+        <span class="spec-value">TOYOTA GAZOO RACING</span>
+    </div>
+
+    <div class="spec">
+        <span class="spec-label">CLASS</span>
+        <span class="spec-value">LMP1</span>
+    </div>
+
+    <div class="spec">
+        <span class="spec-label">POWERTRAIN</span>
+        <span class="spec-value">2.4L TWIN-TURBO V6 HYBRID</span>
+    </div>
+    
+<p class="car-description">
+    The Toyota TS050 Hybrid made endurance racing history,
+    winning Le Mans in 2018, 2019 and 2020. Its combination
+    of a twin-turbo V6 engine and hybrid technology helped
+    Toyota dominate the top class during this era.
+</p>
+
+</div>
+
+
+
+            <button id="carButton">DISCOVER A RACING FACT</button>
+            <p id="carFact" aria-live="polite"></p>
+        </section>
+
+     
+<section id="history" class="content-section">
+    <p class="eyebrow">03 / THE LEGACY</p>
+    <h2>HISTORY IN EVERY LAP.</h2>
+
+    <p>
+        Since 1923, the 24 Hours of Le Mans has tested
+        endurance, inspired engineering innovation and
+        created unforgettable motorsport moments.
+    </p>
+
+    <div class="history-timeline">
+
+        <div class="timeline-item">
+            <span class="timeline-year">1923</span>
+            <div class="timeline-content">
+                <h3>THE BEGINNING</h3>
+                <p>The first 24 Hours of Le Mans takes place in France, beginning a legendary endurance racing tradition.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <span class="timeline-year">2018</span>
+            <div class="timeline-content">
+                <h3>TOYOTA MAKES HISTORY</h3>
+                <p>Toyota wins Le Mans overall for the first time, with the TS050 Hybrid taking victory.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <span class="timeline-year">2023</span>
+            <div class="timeline-content">
+                <h3>100 YEARS OF LE MANS</h3>
+                <p>The race celebrates its centenary, marking 100 years since the first event in 1923.</p>
+            </div>
+        </div>
+
+    </div>
+</section> 
+
+<section class="stats-section">
+    <div class="stat">
+        <span class="stat-number">24</span>
+        <span class="stat-label">HOURS OF RACING</span>
+    </div>
+
+    <div class="stat">
+        <span class="stat-number">13.6</span>
+        <span class="stat-label">KM CIRCUIT LENGTH</span>
+    </div>
+
+    <div class="stat">
+        <span class="stat-number">62</span>
+        <span class="stat-label">CARS IN 2023</span>
+    </div>
+
+    <div class="stat">
+        <span class="stat-number">3</span>
+        <span class="stat-label">DRIVERS PER CAR</span>
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <p>LE MANS — A CELEBRATION OF ENDURANCE RACING.</p>
+    </footer>
+```html
+<script>
+  
+const carButton = document.getElementById("carButton");
+const carFact = document.getElementById("carFact");
+
+const facts = [
+    "The 24 Hours of Le Mans began in 1923.",
+    "Toyota won its first overall Le Mans victory in 2018.",
+    "Le Mans is held at the Circuit de la Sarthe in France.",
+    "The race tests speed, reliability and endurance over 24 hours.", 
+    "The Porsche Curves are one of the most famous sections of Le Mans.",
+    "The lap record is 3:14.791 made by Kamui Kobayashi in 2017 in the Toyota TS050."
+];
+
+
+let previousIndex = -1;
+
+carButton.addEventListener("click", function() {
+    let randomIndex = Math.floor(Math.random() * facts.length);
+
+    if (facts.length > 1) {
+        while (randomIndex === previousIndex) {
+            randomIndex = Math.floor(Math.random() * facts.length);
+        }
+    }
+
+    carFact.textContent = facts[randomIndex];
+    previousIndex = randomIndex;
+});
+
+
+</script>
+```
+</body>
+</html>
